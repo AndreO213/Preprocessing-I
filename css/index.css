@@ -134,3 +134,36 @@ html,
 body {
   height: 100%;
 }
+html {
+  background-image: url("leaf-village.jpg");
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 4rem;
+  border: 1.2rem dotted red;
+  height: 10%;
+}
+header img {
+  width: 15%;
+  height: 10%;
+  object-fit: cover;
+  object-position: 20% 10%;
+  margin-top: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  margin-top: 3%;
+}
+nav a {
+  font-size: 2.3rem;
+  color: black;
+  text-decoration: underline wavy green;
+}
