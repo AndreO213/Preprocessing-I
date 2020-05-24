@@ -54,25 +54,45 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
-html {
-	background-image: url("leaf-village.jpg");
-	
+body {
+	background-image: url(/assets/konoha.jpg) ;
+	width: 100%;
+	margin: auto;
+	background-attachment: inherit;
 }
+
+// body::after {
+// 	content: "→";
+//   background: url(/assets/konoha.jpg);
+//   opacity: 0.5;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+//   position: absolute;
+//   z-index: -1;
+//   width:100%; 
+// }
 
 header {
 	display: flex;
 	flex-wrap: wrap;
 	width:80%;
-	margin: 0 auto;
 	justify-content: space-between;
+	border: 5px ;
+	box-shadow: 20px 20px 50px black;
+	.margin(4rem, 2rem, 10%);
 
 	h1 {
 		font-size: 4rem;
 		border: 1.2rem dotted red;
 		height: 10%;
+		color: black;
+		box-shadow: 20px 20px 50px whitesmoke inset;
+		
 	}
 
 	img {
@@ -90,10 +110,78 @@ nav {
 	justify-content: space-evenly;
 	width: 95%;
 	margin-top: 3%;
+	box-shadow: 50px 50px 1000px orange inset;
+	border-radius: 70%;
 
 	a {
 		font-size: 2.3rem;
 		color: black;
 		text-decoration: underline wavy green;
+		font-shadow: 20px 20px 50px black;
 	}
+
+	nav:hover {
+
+			text-decoration: underline wavy yellow;
+			font-size: 4rem;
+		}
+}
+
+.flex(@justify, @align) {
+	display: flex;
+	justify-content: @justify;
+	align-content: @align;
+}
+
+.margin(@top, @padding, @left) {
+	margin-top: @top;
+	padding: @padding;
+	margin-left: @left;
+} 
+
+#skills {
+	border: 1px solid;
+	// box-sizing: border-box;
+	box-shadow: 20px 20px 50px black;
+
+	th {
+		font-size: 2rem;
+		font-weight: bold;
+		text-shadow: 2px 2px 2px grey;
+	}
+
+	th, tr {
+		border-bottom: 1px solid black;
+		// padding: 5%;
+	}
+
+	td {
+		.margin(0,5%,0);
+		padding-left: 3%;
+	}
+}
+
+#table {
+	.flex(flex-end,center);
+	.margin(5%,0,0);
+	width: 50%;
+}
+
+.missions {
+	width: 40%;
+	height: 5rem;
+	.margin(3%,3%,5%);
+}
+
+	h3 {
+		font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 4%;
+	}
+
+body footer {
+	background: black;
+	border: 5px;
+	.margin(0,2%,0);
+	width: 100%;
 }
