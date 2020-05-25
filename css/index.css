@@ -132,13 +132,15 @@ table {
 }
 html,
 body {
-  height: 100%;
+  height: auto;
 }
 body {
   background-image: url(/assets/konoha.jpg);
   width: 100%;
+  height: auto;
   margin: auto;
-  background-attachment: inherit;
+  background-attachment: local;
+  font-family: 'Libre Baskerville', serif;
 }
 header {
   display: flex;
@@ -191,6 +193,9 @@ nav nav:hover {
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 2px grey;
+  margin-top: 2%;
+  padding: 2%;
+  margin-left: 0;
 }
 #skills th,
 #skills tr {
@@ -201,15 +206,13 @@ nav nav:hover {
   padding: 5%;
   margin-left: 0;
   padding-left: 3%;
+  font-family: 'Roboto', sans-serif;
 }
 #table {
   display: flex;
   justify-content: flex-end;
-  align-content: center;
-  margin-top: 5%;
-  padding: 0;
-  margin-left: 0;
-  width: 50%;
+  align-content: flex-end;
+  margin-right: 15%;
 }
 .missions {
   width: 40%;
@@ -218,16 +221,88 @@ nav nav:hover {
   padding: 3%;
   margin-left: 5%;
 }
-h3 {
+.missions h3 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 4%;
 }
+.missions p {
+  line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
 body footer {
   background: black;
   border: 5px;
-  margin-top: 0;
+  margin-top: 5%;
   padding: 2%;
   margin-left: 0;
   width: 100%;
+}
+.work-history {
+  margin-top: 5%;
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 5%;
+}
+#work {
+  border: 1px solid;
+  box-shadow: 20px 20px 50px black;
+  width: 85%;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+#work th {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px grey;
+  margin-top: 2%;
+  padding: 2%;
+  margin-left: 50%;
+}
+#work th,
+#work tr {
+  border-bottom: 1px solid black;
+}
+#work td {
+  margin-top: 0;
+  padding: 5%;
+  margin-left: 0;
+  padding-left: 3%;
+  font-family: 'Roboto', sans-serif;
+}
+.contact {
+  margin-left: 15%;
+  background: white;
+  border: 1rem solid black;
+  width: 22%;
+  padding: 5%;
+  margin: 0 auto;
+}
+.contact h5 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 25%;
+}
+.contact a {
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .missions {
+    display: block;
+    width: 100%;
+  }
+  #table {
+    display: block;
+    width: 100%;
+  }
+}
+@-ms-viewport {
+  width: device-width;
 }
